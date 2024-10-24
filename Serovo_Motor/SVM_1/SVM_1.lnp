@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"SVM_1.obj" 
+TO "SVM_1" 
+RAMSIZE(256) 

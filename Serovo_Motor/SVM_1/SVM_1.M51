@@ -1,0 +1,165 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/25/2024  11:57:17  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\PERSONAL-WORK\C51\BIN\BL51.EXE STARTUP.obj, SVM_1.obj TO SVM_1 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  SVM_1.obj (SVM_1)
+
+
+LINK MAP OF MODULE:  SVM_1 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         ?DT?SVM_1
+            IDATA   000EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     009BH     UNIT         ?PR?MAIN?SVM_1
+            CODE    089BH     0032H     UNIT         ?PR?_DELAY?SVM_1
+            CODE    08CDH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   SVM_1 (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SVM_1
+
+?PR?MAIN?SVM_1
+  +--> ?PR?_DELAY?SVM_1
+
+
+
+SYMBOL TABLE OF MODULE:  SVM_1 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:08CDH         SEGMENT       ?C_C51STARTUP
+  I:000EH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/25/2024  11:57:17  PAGE 2
+
+
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:08D0H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:08CDH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:08CDH         LINE#         133
+  C:08CFH         LINE#         134
+  C:08D0H         LINE#         135
+  C:08D1H         LINE#         136
+  C:08D3H         LINE#         185
+  C:08D6H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        SVM_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:08A1H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:0090H.6       PUBLIC        svm
+  D:00C8H         PUBLIC        T2CON
+  D:0008H         PUBLIC        i
+  D:000AH         PUBLIC        j
+  D:000CH         PUBLIC        k
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0800H         LINE#         8
+  C:0800H         LINE#         9
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+  C:0800H         LINE#         12
+  C:0805H         LINE#         13
+  C:0805H         LINE#         14
+  C:0807H         LINE#         15
+  C:080EH         LINE#         16
+  C:0810H         LINE#         17
+  C:0817H         LINE#         18
+  C:0828H         LINE#         21
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/25/2024  11:57:17  PAGE 3
+
+
+  C:082DH         LINE#         22
+  C:082DH         LINE#         23
+  C:082DH         LINE#         24
+  C:0830H         LINE#         25
+  C:0832H         LINE#         26
+  C:0839H         LINE#         27
+  C:084AH         LINE#         29
+  C:084FH         LINE#         30
+  C:084FH         LINE#         31
+  C:0851H         LINE#         32
+  C:0858H         LINE#         33
+  C:085AH         LINE#         34
+  C:0861H         LINE#         35
+  C:0872H         LINE#         36
+  C:0885H         LINE#         37
+  C:0885H         LINE#         38
+  C:0885H         LINE#         39
+  C:0888H         LINE#         40
+  C:088AH         LINE#         41
+  C:0891H         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         PROC          L?0029
+  -------         ENDPROC       L?0029
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        itime
+  C:08A1H         LINE#         47
+  C:08A1H         LINE#         48
+  C:08A1H         LINE#         49
+  C:08AFH         LINE#         50
+  C:08AFH         LINE#         51
+  C:08C2H         LINE#         52
+  C:08CCH         LINE#         53
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        SVM_1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00DCH BYTE (10%) *
+******************************************************************************
+
+Program Size: data=15.0 xdata=0 code=220
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

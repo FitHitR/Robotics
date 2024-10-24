@@ -1,0 +1,13 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Personal-Work\Emb\Robatic\Serovo_Motor\Timer_Demo\SVM_Timer_Demo.uvproj
+Project File Date:  09/19/2024
+
+<h2>Output:</h2>
+compiling SVM_Timer_Demo.c...
+SVM_Timer_Demo.c(19): warning C206: 'delay': missing function-prototype
+SVM_Timer_Demo.c(19): error C267: 'delay': requires ANSI-style prototype
+SVM_Timer_Demo.c - 1 Error(s), 1 Warning(s).
