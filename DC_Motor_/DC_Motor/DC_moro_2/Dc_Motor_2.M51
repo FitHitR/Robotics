@@ -1,0 +1,168 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/23/2024  18:35:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\PERSONAL-WORK\C51\BIN\BL51.EXE STARTUP.obj, Dc_Motor_2.obj TO Dc_Motor_2 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  Dc_Motor_2.obj (DC_MOTOR_2)
+
+
+LINK MAP OF MODULE:  Dc_Motor_2 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     002CH     UNIT         ?PR?MAIN?DC_MOTOR_2
+            CODE    082CH     0026H     UNIT         ?PR?_DELAY?DC_MOTOR_2
+            CODE    0852H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   Dc_Motor_2 (?C_STARTUP)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?DC_MOTOR_2
+
+?PR?MAIN?DC_MOTOR_2            -----    -----
+  +--> ?PR?_DELAY?DC_MOTOR_2
+
+?PR?_DELAY?DC_MOTOR_2          0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  Dc_Motor_2 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0852H         SEGMENT       ?C_C51STARTUP
+  I:000AH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/23/2024  18:35:45  PAGE 2
+
+
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0855H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0852H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0852H         LINE#         133
+  C:0854H         LINE#         134
+  C:0855H         LINE#         135
+  C:0856H         LINE#         136
+  C:0858H         LINE#         185
+  C:085BH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        DC_MOTOR_2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0838H         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  B:0090H.0       PUBLIC        en12
+  B:0090H.5       PUBLIC        en34
+  B:0090H.1       PUBLIC        inp1
+  B:0090H.2       PUBLIC        inp2
+  B:0090H.3       PUBLIC        inp3
+  B:0090H.4       PUBLIC        inp4
+  -------         PROC          MAIN
+  C:0800H         LINE#         15
+  C:0800H         LINE#         16
+  C:0800H         LINE#         17
+  C:0802H         LINE#         18
+  C:0804H         LINE#         19
+  C:0804H         LINE#         20
+  C:0804H         LINE#         21
+  C:0806H         LINE#         22
+  C:0808H         LINE#         23
+  C:080AH         LINE#         24
+  C:080CH         LINE#         25
+  C:080FH         LINE#         26
+  C:0812H         LINE#         28
+  C:0812H         LINE#         29
+  C:0812H         LINE#         30
+  C:0812H         LINE#         31
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/23/2024  18:35:45  PAGE 3
+
+
+  C:0812H         LINE#         32
+  C:0815H         LINE#         33
+  C:0818H         LINE#         35
+  C:081AH         LINE#         36
+  C:081CH         LINE#         37
+  C:081EH         LINE#         38
+  C:081EH         LINE#         39
+  C:0821H         LINE#         40
+  C:0824H         LINE#         42
+  C:0824H         LINE#         43
+  C:0824H         LINE#         44
+  C:0824H         LINE#         45
+  C:0824H         LINE#         46
+  C:0827H         LINE#         47
+  C:082AH         LINE#         51
+  -------         ENDPROC       MAIN
+  C:0832H         SYMBOL        L?0011
+  C:0834H         SYMBOL        L?0012
+  -------         PROC          L?0010
+  -------         ENDPROC       L?0010
+  C:0832H         SYMBOL        L?0011
+  C:0834H         SYMBOL        L?0012
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        itime
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0008H         SYMBOL        j
+  -------         ENDDO         
+  C:0838H         LINE#         54
+  C:0838H         LINE#         55
+  C:0838H         LINE#         57
+  C:0842H         LINE#         58
+  C:0842H         LINE#         59
+  C:084AH         LINE#         60
+  C:0851H         LINE#         62
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DC_MOTOR_2
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0061H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=97
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

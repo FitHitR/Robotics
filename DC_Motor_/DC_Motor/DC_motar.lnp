@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"DC_motar.obj" 
+TO "DC_motar" 
+RAMSIZE(256) 

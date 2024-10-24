@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"DC_using_Switch.obj" 
+TO "DC_using_Switch" 
+RAMSIZE(256) 
