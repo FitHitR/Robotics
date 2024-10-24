@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"full_way_reverse.obj" 
+TO "full_way_reverse" 
+RAMSIZE(256) 

@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"full_way_forword.obj" 
+TO "full_way_forword" 
+RAMSIZE(256) 

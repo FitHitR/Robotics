@@ -1,0 +1,77 @@
+C51 COMPILER V9.60.7.0   FULL_WAY_FORWORD                                                  09/21/2024 15:14:59 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE FULL_WAY_FORWORD
+OBJECT MODULE PLACED IN full_way_forword.OBJ
+COMPILER INVOKED BY: C:\Personal-Work\C51\BIN\C51.EXE full_way_forword.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          // steper motore Full way Forword 
+   2          
+   3          #include<reg51.h>
+   4          #include<stdio.h>
+   5          
+   6          sbit stm1 = P2^4;  //Stepper mtr winding 1
+   7          sbit stm2 = P2^5;  //2
+   8          sbit stm3 = P2^6;  //3
+   9          sbit stm4 = P2^7;  //4
+  10          
+  11            void delay(unsigned int);
+  12          
+  13            void main()
+  14            {
+  15   1          while(1)
+  16   1            {
+  17   2              stm1 = 0;
+  18   2              stm2 = 0;
+  19   2              stm3 = 0;
+  20   2              stm4 = 1;       // mtr 4 on
+  21   2              delay(500);
+  22   2        
+  23   2              stm1 = 0;
+  24   2              stm2 = 0;
+  25   2              stm3 = 1;        // mtr 3 on
+  26   2              stm4 = 0;
+  27   2              delay(500);
+  28   2              
+  29   2              stm1 = 0;
+  30   2              stm2 = 1;       // mtr 2 on
+  31   2              stm3 = 0;
+  32   2              stm4 = 0;
+  33   2              delay(500);
+  34   2              
+  35   2              stm1 = 1;     // mtr 1 on
+  36   2              stm2 = 0;
+  37   2              stm3 = 0;
+  38   2              stm4 = 0;
+  39   2              delay(500);
+  40   2            }
+  41   1          }
+  42                    
+  43              void delay(unsigned int itime)
+  44              {
+  45   1            unsigned int i,j;
+  46   1            for(i=0;i<itime;i++)
+  47   1            {
+  48   2              j++;
+  49   2            }
+  50   1          }
+  51                  
+  52            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.60.7.0   FULL_WAY_FORWORD                                                  09/21/2024 15:14:59 PAGE 2   
+
+   CODE SIZE        =     70    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
